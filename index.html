@@ -100,7 +100,7 @@
   @keyframes pop{from{transform:scale(.3);opacity:0}}
   .letter{width:100%;text-align:right;background:linear-gradient(180deg,#fffaf2,#fdeee3);color:#4a2a3a;border-radius:18px;
     padding:24px 22px 26px;box-shadow:0 24px 50px -20px #000c;position:relative;min-height:220px;cursor:pointer}
-  .letter::before{content:"💌";position:absolute;top:-18px;left:18px;font-size:30px}
+  .letter::before{content:"🎉";position:absolute;top:-18px;left:18px;font-size:30px}
   .letter .txt{font-family:"Aref Ruqaa",serif;font-size:20px;line-height:2;white-space:pre-line}
   .caret{display:inline-block;width:2px;height:1.1em;background:#c0587f;vertical-align:middle;margin-inline-start:2px;animation:blink .8s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
@@ -141,11 +141,11 @@
   <section class="scene active" id="s-intro">
     <p class="muted" style="font-size:18px">٢٢ تشرين الثاني</p>
     <h1><span class="js-name"></span>…</h1>
-    <p style="font-size:20px">عندج شي صغير، سويته إلج بإيدي 🤍</p>
+    <p style="font-size:20px">عندج مفاجأة صغيرة 🎁</p>
     <div class="envelope" id="envelope" role="button" aria-label="افتحي الرسالة">
-      <div class="env-body"></div><div class="env-pocket"></div><div class="env-flap"></div><div class="env-seal">💗</div>
+      <div class="env-body"></div><div class="env-pocket"></div><div class="env-flap"></div><div class="env-seal">🎀</div>
     </div>
-    <button class="btn" id="open-btn">افتحي 💌</button>
+    <button class="btn" id="open-btn">افتحي 🎁</button>
     <p class="muted" style="font-size:14px">شغّلي الصوت 🔊</p>
   </section>
 
@@ -159,7 +159,7 @@
     <div class="meter" id="meter"><i></i></div>
     <p><span class="count" id="lit-count">26</span> شمعة بعدها شاعلة</p>
     <button class="btn" id="mic-btn">🎤 خليني أسمع نفختج</button>
-    <button class="link" id="tap-btn">ما يشتغل المايك؟ اضغطي على الكيكة</button>
+    <button class="link" id="tap-btn">إذا ما اشتغل المايك، اضغطي على الكيكة</button>
   </section>
 
   <!-- 3. celebrate -->
@@ -168,66 +168,66 @@
     <h2 style="color:var(--rose)">يا <span class="js-name"></span></h2>
     <div class="age js-age"></div>
     <div class="letter" id="letter"><div class="txt" id="letter-txt"></div><div class="sign" id="sign"></div></div>
-    <button class="btn hidden" id="reasons-btn">عندي إلج <span class="js-age"></span> سبب ←</button>
+    <button class="btn hidden" id="reasons-btn">عندي إلج <span class="js-age"></span> أمنية ←</button>
   </section>
 
   <!-- 4. reasons -->
   <section class="scene" id="s-cards" style="justify-content:flex-start">
     <div class="top">
-      <h2><span class="js-age"></span> سبب يخليج مميزة</h2>
-      <p class="muted">قلبتي <span class="count" id="flip-count">0</span> من <span class="js-age"></span> 💗</p>
+      <h2><span class="js-age"></span> أمنية إلج بسنتج الجديدة</h2>
+      <p class="muted">فتحتي <span class="count" id="flip-count">0</span> من <span class="js-age"></span> 🎁</p>
     </div>
     <div class="grid" id="grid"></div>
     <div class="final" id="final">
-      <h2 style="color:var(--gold)">وهذا بس اللي لحگت أكتبه…</h2>
-      <p style="font-size:19px">الباقي أكثر بهواية 🤍<br>كل عام وانتي بخير يا <span class="js-name"></span></p>
+      <h2 style="color:var(--gold)">إن شاء الله كلها تتحقق 🎉</h2>
+      <p style="font-size:19px">كل عام وانتي بألف خير يا <span class="js-name"></span> 🎂</p>
       <button class="btn" id="again-btn">من البداية ↺</button>
     </div>
   </section>
 </main>
-<footer>سُوّيت بحب 🤍</footer>
 
 <script>
 /* =========================================================
-   ✏️ عدّل هنا: الاسم، الرسالة، والـ26 سبب
+   ✏️ عدّل هنا: الاسم، الرسالة، والـ26 أمنية
    ========================================================= */
 const CONFIG = {
   name: "سجو",
   age: 26,
   from: "",          // اسمك يطلع تحت الرسالة (اختياري)
   letter:
-`كل عام وانتي بخير، وكل عام وانتي أحلى.
-26 سنة… والدنيا صارت أحلى من يوم إجيتي عليها.
-أتمنى هالسنة تكون أخف عليج، كلها ضحك وفرح وأحلام تتحقق.
-شكراً لأنج موجودة، ولأن وجودج يخلي الأيام العادية مو عادية.
-هاي الصفحة الصغيرة سويتها إلج… بس اللي بقلبي أكبر منها بهواية 🤍`,
+`كل عام وانتي بخير يا سجو 🎉
+26 سنة… ومن حقج تحتفلين بكل وحدة منهن.
+أتمنى هالسنة تكون من أحلى سنينج، كلها فرح وضحك ونجاحات.
+وإن شاء الله تكون سنة الفرحة الكبيرة… عقبال العرس 💍
+شكراً لأنج صديقة حلوة، ووجودج يفرّح كل اللي حواليج.
+هاي الصفحة هدية صغيرة… كل عام وانتي بألف خير 🎂`,
   reasons: [
-    "ضحكتج، اللي تخلي أي يوم يصير أحسن",
-    "لأنج تسمعين للآخر، حتى لو السالفة طويلة",
-    "طيبة قلبج، الواضحة من أول كلمة",
-    "لأنج تعرفين شلون تهدّين أي واحد",
-    "سوالفج اللي ما تنمل",
-    "ذوقج بكل شي، من الملابس للأغاني",
-    "لأنج تتذكرين التفاصيل الصغيرة",
-    "قوتج، حتى بالأيام الصعبة",
-    "لأن الحچي وياج ما يحتاج تكلّف",
-    "لمعة عيونج من تتحمسين لشي",
-    "لأنج صادقة، وهاي صارت نادرة",
-    "صبرج علينا 😄",
-    "لأنج تدعمين اللي تحبيهم بكل قلبج",
-    "طريقتج من تحچين عن شي تحبيه",
-    "لأنج تحوّلين أبسط طلعة لذكرى",
-    "لأنج تضحكين حتى على النكت البايخة",
-    "لأنج تحلمين، وتتعبين على أحلامج",
-    "حنيتج اللي توصل بدون ما تحچين",
-    "لأنج إنتي، بدون ما تحاولين تصيرين غير شي",
-    "رسايلج اللي تجي بوقتها بالضبط",
-    "لأنج تخلين اللي حواليج يحسون إنهم مهمين",
-    "عنادج الحلو 😌",
-    "لأن الوقت وياج يركض",
-    "لأنج تستاهلين كل شي حلو بهالدنيا",
-    "لأن كل سنة تصيرين أحلى من اللي قبلها",
-    "ولأن الـ26 بدت هسه… وأحلى سنينج بعدها جاية 🤍"
+    "سنة كلها ضحك من القلب 😄",
+    "صحة وعافية إلج ولأهلج",
+    "عقبال العرس، ونفرح بيج قريباً 💍",
+    "الله يتمملج على خير ويسعدج بحياتج الجديدة",
+    "كل حلم بالج يتحقق هالسنة",
+    "نجاح بكل خطوة تخطيها",
+    "راحة بال، وما يضوجج شي",
+    "سفرة حلوة للمكان اللي تحلمين بيه ✈️",
+    "ناس طيبين حواليج دايماً",
+    "أيام خفيفة وبال مرتاح",
+    "كل دعواتج تنستجاب 🤲",
+    "الضحكة ما تفارق وجهج",
+    "رزق واسع وخير وايد",
+    "تحققين شي تفتخرين بيه",
+    "أمنيتج السرية تتحقق… إنتي تعرفيها 😉",
+    "قهوة الصبح دايماً تطلع مضبوطة ☕",
+    "ولا يوم ينكسر خاطرج",
+    "صداقات تدوم العمر",
+    "تلگين وقت لكل شي تحبيه",
+    "هدوء وسكينة بكل أيامج",
+    "تجهيزات العرس تمشي بسهولة وبدون ضغط 😅",
+    "لحظات حلوة تنحفظ بالذاكرة 📸",
+    "كل صباح يبدي بخبر حلو",
+    "تكونين فخورة بنفسج دايماً",
+    "سنة أحلى من الـ25 بهواية",
+    "ولكل سنة جاية… كل عام وانتي بخير 🎂"
   ]
 };
 /* ========================================================= */
@@ -336,7 +336,7 @@ function tick(){
   for (const p of parts){
     p.life++; p.vx *= .985; p.vy = p.vy*.985 + .22; p.x += p.vx; p.y += p.vy; p.r += p.vr;
     cx.save(); cx.translate(p.x,p.y); cx.rotate(p.r); cx.fillStyle = p.c;
-    if (p.heart){ cx.font = "16px serif"; cx.fillText("💗",-8,8); }
+    if (p.heart){ cx.font = "16px serif"; cx.fillText("✨",-8,8); }
     else { cx.scale(1,Math.cos(p.life*.12)); cx.fillRect(-p.w/2,-p.h/2,p.w,p.h); }
     cx.restore();
   }
@@ -448,7 +448,7 @@ $("#mic-btn").onclick = async () => {
   try{
     stream = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
   }catch(e){
-    $("#cake-hint").textContent = "ما گدرت أوصل للمايك 😅 اضغطي على الكيكة بدالها";
+    $("#cake-hint").textContent = "إذا ما اشتغل المايك، اضغطي على الكيكة 👆";
     $("#mic-btn").style.display = "none"; $("#tap-btn").style.display = "none";
     return;
   }
@@ -499,7 +499,7 @@ function finishLetter(){
   if (!typing) return;
   clearInterval(typing); typing = null;
   $("#letter-txt").textContent = CONFIG.letter;
-  $("#sign").textContent = CONFIG.from ? `— ${CONFIG.from} 🤍` : "🤍";
+  $("#sign").textContent = CONFIG.from ? `— ${CONFIG.from} 🎈` : "🎈";
   $("#sign").classList.add("on");
   const b = $("#reasons-btn"); b.classList.remove("hidden"); b.classList.add("fade-in");
 }
@@ -513,7 +513,7 @@ function buildCards(){
   CONFIG.reasons.slice(0, CONFIG.age).forEach((r,i)=>{
     const c = document.createElement("div");
     c.className = "card"; c.style.animationDelay = (i*35)+"ms";
-    c.innerHTML = `<div class="card-in"><div class="face front"><b>${i+1}</b><span>💗</span></div><div class="face back"></div></div>`;
+    c.innerHTML = `<div class="card-in"><div class="face front"><b>${i+1}</b><span>🎁</span></div><div class="face back"></div></div>`;
     c.querySelector(".back").textContent = r;
     c.onclick = () => {
       if (c.classList.contains("flipped")) return;
