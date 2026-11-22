@@ -28,7 +28,6 @@
     background-color:var(--bg1);
     overflow-x:hidden;min-height:100dvh;
   }
-  /* stars */
   #sky{position:fixed;inset:0;pointer-events:none;z-index:0}
   .star{position:absolute;border-radius:50%;background:#fff;opacity:.6;animation:twinkle 3s ease-in-out infinite}
   @keyframes twinkle{50%{opacity:.1;transform:scale(.6)}}
@@ -58,7 +57,6 @@
   .btn:active{transform:scale(.96)}
   .link{font:inherit;background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:4px;cursor:pointer;font-size:15px;padding:6px}
 
-  /* envelope */
   .envelope{position:relative;width:220px;height:150px;margin:10px auto 6px;cursor:pointer;animation:bob 3s ease-in-out infinite}
   @keyframes bob{50%{transform:translateY(-8px) rotate(-1.5deg)}}
   .env-body{position:absolute;inset:0;border-radius:12px;background:linear-gradient(160deg,#ffd0de,#f7a3bf);box-shadow:0 20px 40px -14px #000a}
@@ -69,7 +67,6 @@
   .envelope.open .env-flap{transform:rotateX(180deg)}
   .envelope.open .env-seal{opacity:0}
 
-  /* cake */
   .cake-fit{width:300px;height:300px;position:relative;transform-origin:top center}
   .cake-wrap{position:absolute;inset:0;cursor:pointer}
   .cake-wrap svg{position:absolute;inset:0;width:300px;height:300px}
@@ -93,7 +90,6 @@
   .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--gold),var(--rose));transition:width .08s}
   .count{font-weight:800;color:var(--gold)}
 
-  /* celebrate */
   .age{font-family:"Aref Ruqaa",serif;font-weight:700;font-size:clamp(92px,30vw,150px);line-height:1;
     background:linear-gradient(180deg,#fff3c4,var(--gold) 40%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent;
     filter:drop-shadow(0 8px 24px #f0a94055);animation:pop 1s cubic-bezier(.2,1.6,.4,1)}
@@ -109,7 +105,6 @@
   .hidden{visibility:hidden;opacity:0}
   .fade-in{visibility:visible;opacity:1;transition:opacity .8s}
 
-  /* cards */
   .top{position:sticky;top:0;z-index:5;padding:10px 0;width:100%;background:linear-gradient(180deg,var(--bg2) 60%,transparent)}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%}
   @media (min-width:480px){.grid{grid-template-columns:repeat(4,1fr)}}
@@ -140,7 +135,6 @@
 <button id="mute" aria-label="الصوت">🔊</button>
 
 <main>
-  <!-- 1. intro -->
   <section class="scene active" id="s-intro">
     <p class="muted" style="font-size:18px">٢٢ تشرين الثاني</p>
     <h1><span class="js-name"></span>…</h1>
@@ -152,7 +146,6 @@
     <p class="muted" style="font-size:14px">شغّلي الصوت 🔊</p>
   </section>
 
-  <!-- 2. cake -->
   <section class="scene" id="s-cake">
     <h2>تمنّي أمنية… وانفخي 🕯️</h2>
     <p class="muted" id="cake-hint">قرّبي التلفون من حلگج وانفخي على المايك</p>
@@ -165,7 +158,6 @@
     <button class="link" id="tap-btn">إذا ما اشتغل المايك، اضغطي على الكيكة</button>
   </section>
 
-  <!-- 3. celebrate -->
   <section class="scene" id="s-party">
     <h1>عيد ميلاد سعيد</h1>
     <h2 style="color:var(--rose)">يا <span class="js-name"></span></h2>
@@ -174,7 +166,6 @@
     <button class="btn hidden" id="reasons-btn">عندي إلج <span class="js-age"></span> أمنية ←</button>
   </section>
 
-  <!-- 4. reasons -->
   <section class="scene" id="s-cards" style="justify-content:flex-start">
     <div class="top">
       <h2><span class="js-age"></span> أمنية إلج بسنتج الجديدة</h2>
@@ -191,19 +182,16 @@
 </main>
 
 <script>
-/* =========================================================
-   ✏️ عدّل هنا: الاسم، الرسالة، والـ26 أمنية
-   ========================================================= */
 const CONFIG = {
   name: "سجو",
   age: 26,
-  from: "",          // اسمك يطلع تحت الرسالة (اختياري)
+  from: "",
   letter:
 `كل عام وانت بخير يا سجو 🎉
 26 سنة… ومن حقج تحتفلين بكل وحدة منهن.
 أتمنى هالسنة تكون من أحلى سنينج، كلها فرح وضحك ونجاحات.
-وإن شاء الله تكون سنة الفرحة الكبيرة… عقبال العرس 💍
-شكراً لأنج صديقة حلوة، ووجودج يفرّح كل اللي حواليج.
+وأتمنى تكون سنة الفرحة الكبيرة… عقبال العرس 💍
+شكراً لأنج صديقة صدوقة، وشكراً من كل قلبي على وقفاتج وياي… مواقفج فرحتني وما راح أنساها.
 هاي الصفحة هدية صغيرة… كل عام وانت بألف خير 🎂`,
   reasons: [
     "سنة أجمل من كل السنوات اللي مرت عليج",
@@ -234,7 +222,6 @@ const CONFIG = {
     "وأمنيتي الأخيرة إلج يا سجو من توصلين لعيد ميلادج الجاي وتقرين هالأمنيات تكون كلها تحققت وتكونين أسعد وأقوى وأقرب لكل أحلامج ❤️"
   ]
 };
-/* ========================================================= */
 
 const $ = s => document.querySelector(s);
 document.querySelectorAll(".js-name").forEach(e => e.textContent = CONFIG.name);
@@ -247,7 +234,6 @@ function show(id){
   window.scrollTo({top:0,behavior:"instant"});
 }
 
-/* ---------- stars ---------- */
 (() => {
   const sky = $("#sky");
   for (let i = 0; i < 70; i++){
@@ -259,7 +245,6 @@ function show(id){
   }
 })();
 
-/* ---------- audio ---------- */
 let actx = null, muted = false, master = null;
 function initAudio(){
   if (actx) return;
@@ -311,7 +296,6 @@ function puff(){
   src.buffer = buf; src.connect(f); f.connect(g); g.connect(master); src.start();
 }
 
-/* ---------- confetti ---------- */
 const cv = $("#confetti"), cx = cv.getContext("2d");
 let parts = [], raf = null;
 const COLORS = ["#ff8fb1","#ffd48a","#c9a7ff","#9ee8d2","#ffffff","#ff6f91"];
@@ -348,7 +332,6 @@ function tick(){
   if (!raf) cx.clearRect(0,0,innerWidth,innerHeight);
 }
 
-/* ---------- balloons ---------- */
 function balloons(n=12){
   const box = $("#balloons");
   for (let i=0;i<n;i++){
@@ -365,7 +348,6 @@ function balloons(n=12){
   }
 }
 
-/* ---------- 1. intro ---------- */
 function openEnvelope(){
   initAudio(); chime();
   $("#envelope").classList.add("open");
@@ -375,11 +357,9 @@ function openEnvelope(){
 $("#open-btn").onclick = openEnvelope;
 $("#envelope").onclick = openEnvelope;
 
-/* ---------- 2. cake ---------- */
 const candles = [];
 (function buildCake(){
   const cake = $("#cake");
-  // drips along the front edge of the top tier
   let drip = "M50 125 ";
   for (let x=50; x<=250; x+=10){
     const y = 125 + 12*Math.sqrt(Math.max(0,1-((x-150)/100)**2));
@@ -413,7 +393,7 @@ const candles = [];
   const n = CONFIG.age;
   for (let i=0;i<n;i++){
     const a = (i/n)*Math.PI*2 + .12;
-    const ring = i%2 ? .62 : .86;               // two rings so 26 candles fit nicely
+    const ring = i%2 ? .62 : .86;
     const x = 150 + Math.cos(a)*84*ring, y = 125 + Math.sin(a)*9*ring;
     const c = document.createElement("div");
     c.className = "candle";
@@ -438,14 +418,12 @@ function blowOut(k=1){
   $("#lit-count").textContent = litCount;
   if (litCount===0 && !done){ done = true; setTimeout(celebrate, 900); }
 }
-// tap fallback: every tap blows out a few
 $("#cake").onclick = () => { if (!done){ initAudio(); puff(); blowOut(3); } };
 $("#tap-btn").onclick = () => {
   $("#cake-hint").textContent = "اضغطي على الكيكة… كل ضغطة نفخة 💨";
   $("#tap-btn").style.display = "none"; $("#mic-btn").style.display = "none";
 };
 
-// microphone blowing
 let stream = null;
 $("#mic-btn").onclick = async () => {
   initAudio();
@@ -468,7 +446,7 @@ $("#mic-btn").onclick = async () => {
     let sum = 0; for (const v of data){ const x=(v-128)/128; sum += x*x; }
     const rms = Math.sqrt(sum/data.length);
     const dt = (now-last)/1000; last = now;
-    if (now - t0 < 700){ base += rms; samples++; }               // calibrate room noise
+    if (now - t0 < 700){ base += rms; samples++; }
     const thr = Math.max(.07, (samples? base/samples : 0)*2.5 + .03);
     $("#meter i").style.width = Math.min(100, rms/thr*60)+"%";
     const blowing = now - t0 >= 700 && rms > thr;
@@ -479,7 +457,6 @@ $("#mic-btn").onclick = async () => {
   })(performance.now());
 };
 
-/* ---------- 3. celebrate ---------- */
 function celebrate(){
   show("#s-party");
   burst(220); setTimeout(()=>burst(120, innerWidth*.15, innerHeight*.5, .8),300);
@@ -509,7 +486,6 @@ function finishLetter(){
 }
 $("#reasons-btn").onclick = () => { show("#s-cards"); buildCards(); };
 
-/* ---------- 4. reasons ---------- */
 let flipped = 0, built = false;
 function buildCards(){
   if (built) return; built = true;
