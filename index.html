@@ -113,14 +113,17 @@
   .top{position:sticky;top:0;z-index:5;padding:10px 0;width:100%;background:linear-gradient(180deg,var(--bg2) 60%,transparent)}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%}
   @media (min-width:480px){.grid{grid-template-columns:repeat(4,1fr)}}
-  .card{perspective:800px;height:138px;cursor:pointer;animation:fadeUp .6s both}
+  .card{perspective:800px;height:158px;cursor:pointer;animation:fadeUp .6s both}
   .card-in{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,1.3,.5,1);transform-style:preserve-3d}
   .card.flipped .card-in{transform:rotateY(180deg)}
   .face{position:absolute;inset:0;border-radius:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:10px}
   .front{background:linear-gradient(150deg,#ffffff1c,#ffffff08);border:1px solid var(--card-line);box-shadow:inset 0 1px 0 #ffffff22}
   .front b{font-family:"Aref Ruqaa",serif;font-size:34px;color:var(--gold);line-height:1}
   .front span{font-size:15px;margin-top:6px}
-  .back{transform:rotateY(180deg);background:linear-gradient(160deg,#ffe1ea,#ffd3b8);color:#5a2140;font-size:14px;font-weight:500;line-height:1.55}
+  .back{transform:rotateY(180deg);background:linear-gradient(160deg,#ffe1ea,#ffd3b8);color:#5a2140;font-size:13.5px;font-weight:500;line-height:1.55}
+  .card.wide{grid-column:1/-1;height:150px}
+  .card.wide .back{font-size:16px;padding:14px 18px}
+  .secret{font-family:"Aref Ruqaa",serif;font-size:22px;color:var(--mint);margin-top:4px}
   .final{display:none;flex-direction:column;align-items:center;gap:16px;margin-top:26px}
   .final.on{display:flex;animation:fadeUp .9s}
 
@@ -179,8 +182,9 @@
     </div>
     <div class="grid" id="grid"></div>
     <div class="final" id="final">
-      <h2 style="color:var(--gold)">إن شاء الله كلها تتحقق 🎉</h2>
-      <p style="font-size:19px">كل عام وانتي بألف خير يا <span class="js-name"></span> 🎂</p>
+      <h2 style="color:var(--gold)">أتمنى كلها تتحقق 🎉</h2>
+      <p style="font-size:19px">كل عام وانت بألف خير يا <span class="js-name"></span> 🎂</p>
+      <p class="secret">جود نجحت</p>
       <button class="btn" id="again-btn">من البداية ↺</button>
     </div>
   </section>
@@ -195,39 +199,39 @@ const CONFIG = {
   age: 26,
   from: "",          // اسمك يطلع تحت الرسالة (اختياري)
   letter:
-`كل عام وانتي بخير يا سجو 🎉
+`كل عام وانت بخير يا سجو 🎉
 26 سنة… ومن حقج تحتفلين بكل وحدة منهن.
 أتمنى هالسنة تكون من أحلى سنينج، كلها فرح وضحك ونجاحات.
 وإن شاء الله تكون سنة الفرحة الكبيرة… عقبال العرس 💍
 شكراً لأنج صديقة حلوة، ووجودج يفرّح كل اللي حواليج.
-هاي الصفحة هدية صغيرة… كل عام وانتي بألف خير 🎂`,
+هاي الصفحة هدية صغيرة… كل عام وانت بألف خير 🎂`,
   reasons: [
-    "سنة كلها ضحك من القلب 😄",
-    "صحة وعافية إلج ولأهلج",
-    "عقبال العرس، ونفرح بيج قريباً 💍",
-    "الله يتمملج على خير ويسعدج بحياتج الجديدة",
-    "كل حلم بالج يتحقق هالسنة",
+    "سنة أجمل من كل السنوات اللي مرت عليج",
+    "عرسج عن قريب ونفرح بيج",
+    "السنة التجي تتونسين أكثر وكلها سفرات",
+    "كل أحلامج تصير حقيقة وحدة ورا الثانية",
+    "أيام حلوة تعوضج عن كل يوم صعب",
     "نجاح بكل خطوة تخطيها",
-    "راحة بال، وما يضوجج شي",
-    "سفرة حلوة للمكان اللي تحلمين بيه ✈️",
-    "ناس طيبين حواليج دايماً",
-    "أيام خفيفة وبال مرتاح",
-    "كل دعواتج تنستجاب 🤲",
-    "الضحكة ما تفارق وجهج",
-    "رزق واسع وخير وايد",
-    "تحققين شي تفتخرين بيه",
-    "أمنيتج السرية تتحقق… إنتي تعرفيها 😉",
-    "قهوة الصبح دايماً تطلع مضبوطة ☕",
-    "ولا يوم ينكسر خاطرج",
-    "صداقات تدوم العمر",
-    "تلگين وقت لكل شي تحبيه",
-    "هدوء وسكينة بكل أيامج",
-    "تجهيزات العرس تمشي بسهولة وبدون ضغط 😅",
-    "لحظات حلوة تنحفظ بالذاكرة 📸",
-    "كل صباح يبدي بخبر حلو",
-    "تكونين فخورة بنفسج دايماً",
-    "سنة أحلى من الـ25 بهواية",
-    "ولكل سنة جاية… كل عام وانتي بخير 🎂"
+    "ضحكتج تبقى وما تفارق وجهج أبد",
+    "راحة بال تنسيج كل تعب وتفكير",
+    "نجاحات تفرح قلبج وتخلّيج فخورة بنفسج",
+    "كل خطوة تخطيها تقربج من الشي اللي تتمنيه",
+    "سنة مليانة مفاجآت حلوة ما تتوقعيها",
+    "تبقين قوية حتى بالأيام اللي تحسين بيها بالتعب",
+    "تحققين شي چنتي تعتقدين أنه مستحيل",
+    "فرحة كبيرة تنسيج كل لحظة حزن",
+    "كل صبح يجيج سبب جديد للابتسام",
+    "تعيشين لحظات حلوة تتذكرينها طول عمرج",
+    "تكتشفين بنفسج أشياء جميلة ما جنتي تعرفيها",
+    "تحصلين على كل شي تستحقينه وأكثر",
+    "تبقين محاطة بالناس اللي يشبهون طيبة قلبج",
+    "سنة بدون ندم على الماضي ولا خوف من المستقبل",
+    "توصلين للمكان اللي تتمنين تكونين بيه",
+    "كل أمنية تأخرت عليج تتحقق بأجمل طريقة",
+    "تبقين على طبيعتج الحلوة مهما تغيرت الدنيا",
+    "تضحكين من قلبج لدرجة تنسين شنو جان مضايقج",
+    "تكون سنتج الجديدة بداية لأجمل فصل بحياتج",
+    "وأمنيتي الأخيرة إلج يا سجو من توصلين لعيد ميلادج الجاي وتقرين هالأمنيات تكون كلها تحققت وتكونين أسعد وأقوى وأقرب لكل أحلامج ❤️"
   ]
 };
 /* ========================================================= */
@@ -512,7 +516,7 @@ function buildCards(){
   const g = $("#grid");
   CONFIG.reasons.slice(0, CONFIG.age).forEach((r,i)=>{
     const c = document.createElement("div");
-    c.className = "card"; c.style.animationDelay = (i*35)+"ms";
+    c.className = "card" + (i === CONFIG.age-1 ? " wide" : ""); c.style.animationDelay = (i*35)+"ms";
     c.innerHTML = `<div class="card-in"><div class="face front"><b>${i+1}</b><span>🎁</span></div><div class="face back"></div></div>`;
     c.querySelector(".back").textContent = r;
     c.onclick = () => {
